@@ -72,6 +72,20 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Filters */
+
+.filter {
+	transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.filter.active {
+	transform: translateY(-5px); /* Move the button up */
+    background-color: #dbdbdb; /* Highlight color */
+    color: white; /* Text color for the active button */
+    border-color: #dbdbdb; /* Border color for active button */
+}
+
+
 /* Basic */
 
 	@-ms-viewport {
