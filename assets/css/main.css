@@ -2586,7 +2586,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2610,13 +2610,16 @@ input, select, textarea {
 				width: 100%;
 				border-radius: 4px;
 				overflow: hidden;
-				filter: brightness(0.7);
+				filter: brightness(0.4);
 			}
 
 				.tiles article > .image img {
 					display: block;
 					width: 100%;
-				}
+					aspect-ratio: 1 / 1;
+					object-fit: cover;
+					filter: brightness(0.6);
+			}
 
 				.tiles article > .image:before {
 					pointer-events: none;
@@ -2634,7 +2637,7 @@ input, select, textarea {
 					opacity: 1.0;
 					z-index: 1;
 					opacity: 1;
-				}
+			}
 
 				.tiles article > .image:after {
 					pointer-events: none;
@@ -2823,7 +2826,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 3em 0 0.1em 0 ;
 	}
 
 		#header .logo {
