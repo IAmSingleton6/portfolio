@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Snow Globe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Snow Globe</h1>
+							<span class="image main"><img src="../images/snow_globe.jpeg" alt="" /></span>
+							<p>A multiplayer game created in Unity played between 2 players. One player would control the character inside the snow globe, while the other would control the snow globe itself, rotating it and acting as the eyes in the sky.</p>
+							<p>The multiplayer aspect of the game required clear networking principals <a href="https://fish-networking.gitbook.io/docs">using Fishnet</a>. clear ownership would have to be assigned per object, and ensuring all necessary game states were synced was a huge challenge, along with synchronizing major game events. The rotation of the world could be synced by only sending the Quaternion of the rotation, and computing all necessary calculations for visuals and physics locally. Having one player be the primary source of truth was crucial here, as if one version desynchronized, one version of the game has to be chosen to be correct, so the other can correct their version to align the experience again.</p>
+							<p>A big challenge was in rotating the world. This is a large computation for each object in the world, requiring full recalculation of Transforms and lighting, along with creating more complex scripts across all objects for general gameplay and movement. A solution was created where the directional light and the camera was moved in the inverse direction that the world would originally be rotated, meaning only the main directional light would be rotated, saving huge amounts of computation.</p>
+							<p>The game has a lot of potential for future development, including a ship in a bottle. It was a great learning experience overall.</p>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+	<script src="/assets/js/includes.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

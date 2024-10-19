@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Rivers Plugin for Unity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Rivers Plugin for Unity</h1>
+							<span class="image main"><img src="../images/river.png" alt="" /></span>
+							<p>A plugin designed for Unity, using Unity's spline package, where a river mesh would be created along the spline.</p>
+							<p>What makes this plugin special is that each spline point can be selected along the spline, and assigned unique data which is sent to both the CPU and GPU. This allows shaders/the creation of the mesh itself to do unique things, such as change the width dynamically, change flow speed between various points, or change color as you go along the stream.</p>
+							<p>This involved creating an editor tool which allowed a gizmo to be placed at each spline point, creating a struct for each one with default data, that can be changed through the Unity GUI. Upon any change, it is then serialized and pushed to the shader buffers so that the data is easily accessible within any shader if the property name is synchronized.</p>
+							<p>The normals also have to be recalculated and smoothed between each spline point for the procedural mesh generation to allow for smooth lighting per vertex, including over 90 degree turns which can cause weird visual bugs if not recalculated each time.</p>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+	<script src="/assets/js/includes.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

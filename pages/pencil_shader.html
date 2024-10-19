@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pencil Shader</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Pencil Shader</h1>
+							<span class="image main"><img src="../images/pencil_shader.png" alt="" /></span>
+							<p>A plugin created in Godot, designed to transform any image into a pencil drawing.</p>
+							<p>The shader has many different options, making it incredibly versatile as all of its rendering is done in real time. The line thickness, edge thickness, textures used, intensity per texture, scale per texture, and texture per image RGB intensity can all be adjusted.</p>
+							<p>To make this work, the images RGB values are converted to a 0-1 scale, creating different textures per intensity. Greater intensities invoke a greater pencil thickness, with a darker color and thicker texture, where as the lower intensities are replaced by a thinner pencil texture. Each of these textures are manipulated by the intensity values ensuring there are distinct differences in similar intensity regions.</p>
+							<p>From the 0-1 RGB intensity value created, an edge detection shader pass is done, creating the sharp defined edges, which is a sharp pencil texture overlaid onto the image at the sharp boundaries depending on the difference of RGB intensity between each surrounding pixel. This pass is then deformed by a low intensity perlin noise texture, making the pencil strokes less uniform and look more hand drawn.</p>
+							<p>A large optimization depending on the use case of the shader would be making the sharp edge pencil edge filter be done in one post processing pass instead of per picture, reducing the repeated high performance calculation per image, and allowing depth to be used to draw edges dynamically in the game world adding additional variety and dynamism to the effect during realtime gameplay/rendering.</p>
+						</div>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+	<script src="/assets/js/includes.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
